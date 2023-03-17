@@ -18,7 +18,7 @@ namespace BugTrackerUI.Services
 
         public List<Bug> GetBugs()
         {
-            return Bugs;
+            return Bugs.OrderBy(x => x.Priority).ToList();
         }
     }
 }
